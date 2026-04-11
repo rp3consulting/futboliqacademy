@@ -332,6 +332,82 @@ body {
 }
 
 /* ===========================
+   THE DATA SECTION
+=========================== */
+.data-section {
+    padding: 120px 8%;
+    background: #0a0a0a;
+    text-align: center;
+}
+
+.data-section h2 {
+    font-size: 2.8rem;
+    font-weight: 700;
+    margin-bottom: 10px;
+}
+
+.data-subtitle {
+    font-size: 1.2rem;
+    opacity: 0.75;
+    margin-bottom: 60px;
+}
+
+.data-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 35px;
+}
+
+/* Card styling */
+.data-card {
+    padding: 40px 25px;
+    border-radius: 14px;
+    background: rgba(255, 255, 255, 0.05);
+    border: 1px solid rgba(255, 255, 255, 0.08);
+    backdrop-filter: blur(6px);
+    transition: 0.3s ease;
+    text-align: center;
+}
+
+.data-card strong {
+    font-size: 3rem;
+    font-weight: 700;
+    color: #ff4d4d; /* red accent */
+    display: block;
+    margin-bottom: 12px;
+}
+
+.data-card p {
+    opacity: 0.75;
+    font-size: 1rem;
+    line-height: 1.5;
+}
+
+/* Hover effect */
+.data-card:hover {
+    transform: translateY(-6px);
+    border-color: rgba(255, 77, 77, 0.4);
+    box-shadow: 0 0 25px rgba(255, 77, 77, 0.15);
+}
+
+/* Responsive */
+@media (max-width: 1024px) {
+    .data-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 768px) {
+    .data-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .data-card strong {
+        font-size: 2.4rem;
+    }
+}
+
+/* ===========================
    ANIMATIONS
 =========================== */
 @keyframes fadeIn {
