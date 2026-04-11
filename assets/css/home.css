@@ -692,6 +692,160 @@ body {
 }
 
 /* ===========================
+   FINAL CTA SECTION
+=========================== */
+.final-cta {
+    padding: 140px 8%;
+    background: #000;
+    text-align: center;
+    position: relative;
+}
+
+.final-cta h2 {
+    font-size: 2.8rem;
+    font-weight: 700;
+    margin-bottom: 15px;
+}
+
+.final-cta p {
+    font-size: 1.2rem;
+    opacity: 0.75;
+    margin-bottom: 40px;
+}
+
+.cta-buttons {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+}
+
+.btn-red {
+    padding: 14px 28px;
+    background: #ff4d4d;
+    color: white;
+    border-radius: 6px;
+    font-weight: 600;
+    text-decoration: none;
+    transition: 0.25s ease;
+}
+
+.btn-red:hover {
+    background: #ff6666;
+}
+
+.btn-dark {
+    padding: 14px 28px;
+    background: rgba(255,255,255,0.1);
+    color: white;
+    border-radius: 6px;
+    font-weight: 600;
+    text-decoration: none;
+    border: 1px solid rgba(255,255,255,0.15);
+    transition: 0.25s ease;
+}
+
+.btn-dark:hover {
+    background: rgba(255,255,255,0.2);
+}
+
+/* ===========================
+   FOOTER
+=========================== */
+.footer {
+    padding: 100px 8%;
+    background: #0a0a0a;
+}
+
+.footer-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 40px;
+}
+
+.footer-col h3 {
+    font-size: 1.6rem;
+    margin-bottom: 12px;
+}
+
+.footer-col h4 {
+    font-size: 1.2rem;
+    margin-bottom: 12px;
+}
+
+.footer-col p {
+    opacity: 0.75;
+    margin-bottom: 12px;
+    line-height: 1.5;
+}
+
+.footer-col ul {
+    list-style: none;
+}
+
+.footer-col ul li {
+    margin-bottom: 10px;
+}
+
+.footer-col ul li a {
+    color: white;
+    opacity: 0.75;
+    text-decoration: none;
+    transition: 0.25s ease;
+}
+
+.footer-col ul li a:hover {
+    opacity: 1;
+}
+
+.footer-socials {
+    display: flex;
+    gap: 15px;
+    margin-top: 15px;
+}
+
+.icon {
+    width: 22px;
+    height: 22px;
+    display: inline-block;
+    background: rgba(255,255,255,0.3);
+    border-radius: 4px;
+}
+
+/* Upload button in footer */
+.footer-upload {
+    display: inline-block;
+    margin-top: 15px;
+    padding: 12px 20px;
+    border-radius: 6px;
+    background: #007aff;
+    color: white;
+    text-decoration: none;
+    font-weight: 600;
+    transition: 0.25s ease;
+}
+
+.footer-upload:hover {
+    background: #0a84ff;
+}
+
+/* Responsive */
+@media (max-width: 1024px) {
+    .footer-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 768px) {
+    .cta-buttons {
+        flex-direction: column;
+    }
+
+    .footer-grid {
+        grid-template-columns: 1fr;
+    }
+}
+
+/* ===========================
    ANIMATIONS
 =========================== */
 @keyframes fadeIn {
