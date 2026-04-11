@@ -37,10 +37,10 @@ body {
     position: absolute;
     inset: 0;
 
-    /* Layer 1: Dark base */
+    /* Base */
     background: #000;
 
-    /* Layer 2: Tactical pitch lines (CSS SVG) */
+    /* Tactical pitch lines (CSS SVG) */
     mask-image: 
         radial-gradient(circle at 50% 50%, rgba(255,255,255,0.25), transparent 70%),
         url("data:image/svg+xml;utf8,\
@@ -56,7 +56,7 @@ body {
     mask-size: cover;
     mask-repeat: no-repeat;
 
-    /* Layer 3: Cinematic gradients */
+    /* Cinematic gradients */
     background-image:
         radial-gradient(circle at 20% 30%, rgba(0, 122, 255, 0.25), transparent 60%),
         radial-gradient(circle at 80% 70%, rgba(0, 255, 200, 0.15), transparent 60%);
@@ -167,17 +167,71 @@ body {
 }
 
 /* ===========================
-   ANIMATIONS
+   WHY FIQA SECTION
 =========================== */
-@keyframes fadeIn {
-    from { opacity: 0; transform: translateY(20px); }
-    to { opacity: 1; transform: translateY(0); }
+.why-fiqa {
+    padding: 120px 8%;
+    background: #0a0a0a;
+    text-align: center;
 }
 
-/* ===========================
-   RESPONSIVE
-=========================== */
+.why-fiqa h2 {
+    font-size: 2.8rem;
+    font-weight: 700;
+    margin-bottom: 10px;
+}
+
+.why-subtitle {
+    font-size: 1.2rem;
+    opacity: 0.75;
+    margin-bottom: 60px;
+}
+
+.why-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 35px;
+}
+
+.why-card {
+    background: rgba(255, 255, 255, 0.05);
+    border: 1px solid rgba(255, 255, 255, 0.08);
+    padding: 30px;
+    border-radius: 12px;
+    text-align: left;
+    transition: 0.3s ease;
+    backdrop-filter: blur(6px);
+}
+
+.why-card:hover {
+    transform: translateY(-6px);
+    border-color: rgba(0, 122, 255, 0.4);
+    box-shadow: 0 0 25px rgba(0, 122, 255, 0.15);
+}
+
+.why-card h3 {
+    font-size: 1.25rem;
+    margin-bottom: 12px;
+    line-height: 1.3;
+}
+
+.why-card p {
+    opacity: 0.75;
+    line-height: 1.55;
+}
+
+/* Responsive */
+@media (max-width: 1024px) {
+    .why-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
 @media (max-width: 768px) {
+    .why-grid {
+        grid-template-columns: 1fr;
+    }
+
     .hero-content h1 {
         font-size: 2.4rem;
     }
@@ -190,4 +244,12 @@ body {
         flex-direction: column;
         gap: 20px;
     }
+}
+
+/* ===========================
+   ANIMATIONS
+=========================== */
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(20px); }
+    to { opacity: 1; transform: translateY(0); }
 }
