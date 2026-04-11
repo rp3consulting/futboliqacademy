@@ -1,5 +1,5 @@
 /* ===========================
-   NAVIGATION
+   NAVIGATION — FIQA PREMIUM
 =========================== */
 
 .nav-header {
@@ -7,31 +7,35 @@
     top: 0;
     left: 0;
     width: 100%;
-    padding: 18px 5%;
+    padding: 22px 6%;
     display: flex;
     align-items: center;
     justify-content: space-between;
     background: rgba(0, 0, 0, 0.55);
-    backdrop-filter: blur(10px);
-    z-index: 1000;
+    backdrop-filter: blur(12px);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+    z-index: 999;
 }
 
+/* LOGO */
 .nav-logo {
-    font-size: 1.4rem;
+    font-size: 1.6rem;
     font-weight: 700;
     letter-spacing: 1px;
+    color: white;
 }
 
+/* NAV LINKS */
 .nav-links {
     display: flex;
-    gap: 30px;
+    gap: 35px;
 }
 
 .nav-links a {
     color: white;
     text-decoration: none;
-    font-weight: 500;
-    opacity: 0.85;
+    font-size: 1rem;
+    opacity: 0.75;
     transition: 0.25s ease;
 }
 
@@ -39,31 +43,57 @@
     opacity: 1;
 }
 
+/* ACTION BUTTONS */
 .nav-actions {
     display: flex;
     gap: 15px;
 }
 
-.btn-primary,
-.btn-outline {
-    padding: 10px 18px;
+.nav-actions .btn-outline,
+.nav-actions .btn-primary {
+    padding: 10px 20px;
     border-radius: 6px;
     font-weight: 600;
     text-decoration: none;
+    font-size: 0.95rem;
     transition: 0.25s ease;
 }
 
-.btn-primary {
-    background: #007aff;
-    color: white;
-}
-
-.btn-outline {
+/* Outline Button */
+.nav-actions .btn-outline {
     border: 2px solid #007aff;
     color: #007aff;
 }
 
-.btn-outline:hover {
+.nav-actions .btn-outline:hover {
     background: #007aff;
     color: white;
+}
+
+/* Primary Button */
+.nav-actions .btn-primary {
+    background: #007aff;
+    color: white;
+}
+
+.nav-actions .btn-primary:hover {
+    background: #0a84ff;
+}
+
+/* ===========================
+   MOBILE MENU (HIDDEN FOR NOW)
+=========================== */
+
+@media (max-width: 900px) {
+    .nav-links {
+        display: none; /* hide desktop links */
+    }
+
+    .nav-actions {
+        display: none; /* hide desktop buttons */
+    }
+
+    .nav-header {
+        justify-content: center;
+    }
 }
