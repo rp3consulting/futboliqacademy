@@ -247,6 +247,91 @@ body {
 }
 
 /* ===========================
+   FOUR PILLARS SECTION
+=========================== */
+.pillars {
+    padding: 120px 8%;
+    background: #0a0a0a;
+    text-align: center;
+}
+
+.pillars h2 {
+    font-size: 2.8rem;
+    font-weight: 700;
+    margin-bottom: 10px;
+}
+
+.pillars-subtitle {
+    font-size: 1.2rem;
+    opacity: 0.75;
+    margin-bottom: 60px;
+}
+
+.pillars-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 35px;
+}
+
+/* Card Base */
+.pillar-card {
+    padding: 35px;
+    border-radius: 14px;
+    background: rgba(255, 255, 255, 0.05);
+    border: 1px solid rgba(255, 255, 255, 0.08);
+    backdrop-filter: blur(6px);
+    text-align: left;
+    transition: 0.3s ease;
+}
+
+.pillar-card h3 {
+    font-size: 1.4rem;
+    margin-bottom: 12px;
+    font-weight: 600;
+}
+
+.pillar-card p {
+    opacity: 0.75;
+    line-height: 1.55;
+}
+
+/* Hover effect */
+.pillar-card:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 0 25px rgba(0, 122, 255, 0.15);
+}
+
+/* Color Accents */
+.technical {
+    border-left: 4px solid #007aff;
+}
+
+.tactical {
+    border-left: 4px solid #9b59ff;
+}
+
+.physical {
+    border-left: 4px solid #2ecc71;
+}
+
+.mental {
+    border-left: 4px solid #ff9f43;
+}
+
+/* Responsive */
+@media (max-width: 1024px) {
+    .pillars-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 768px) {
+    .pillars-grid {
+        grid-template-columns: 1fr;
+    }
+}
+
+/* ===========================
    ANIMATIONS
 =========================== */
 @keyframes fadeIn {
