@@ -38,7 +38,7 @@
     <!-- ===========================
          HERO SECTION
     ============================ -->
-    <section class="hero">
+    <section class="hero fade-in">
         <div class="hero-overlay"></div>
 
         <div class="hero-content">
@@ -63,10 +63,13 @@
         </div>
     </section>
 
+    <!-- DIVIDER -->
+    <div class="fiqa-divider"><span>FUTBOL IQ INTELLIGENCE</span></div>
+
     <!-- ===========================
          WHY FIQA SECTION
     ============================ -->
-    <section class="section-container why-fiqa">
+    <section class="section-container why-fiqa fade-in">
         <h2>Why Futbol IQ Academy?</h2>
         <p class="section-subtitle">Professional Analysis Changes the Trajectory</p>
 
@@ -129,10 +132,13 @@
         </div>
     </section>
 
+    <!-- DIVIDER -->
+    <div class="fiqa-divider"><span>FUTBOL IQ INTELLIGENCE</span></div>
+
     <!-- ===========================
          FOUR PILLARS SECTION
     ============================ -->
-    <section class="section-container pillars">
+    <section class="section-container pillars fade-in">
         <h2>The Four Pillars of Complete Player Development</h2>
         <p class="section-subtitle">
             Elite players excel across all four dimensions. We analyze and develop each pillar systematically.
@@ -177,10 +183,13 @@
         </div>
     </section>
 
+    <!-- DIVIDER -->
+    <div class="fiqa-divider"><span>FUTBOL IQ INTELLIGENCE</span></div>
+
     <!-- ===========================
          THE DATA SECTION
     ============================ -->
-    <section class="section-container data-section">
+    <section class="section-container data-section fade-in">
         <h2>The Data</h2>
         <p class="section-subtitle">Why Analysis Changes Everything</p>
 
@@ -209,10 +218,13 @@
         </div>
     </section>
 
+    <!-- DIVIDER -->
+    <div class="fiqa-divider"><span>FUTBOL IQ INTELLIGENCE</span></div>
+
     <!-- ===========================
          THE DIFFERENCE SECTION
     ============================ -->
-    <section class="section-container difference">
+    <section class="section-container difference fade-in">
         <h2>The Difference</h2>
         <p class="section-subtitle">Analysis vs. No Analysis</p>
         <p class="difference-tagline">See how Futbol IQ players outperform across every metric.</p>
@@ -272,10 +284,13 @@
         </div>
     </section>
 
+    <!-- DIVIDER -->
+    <div class="fiqa-divider"><span>FUTBOL IQ INTELLIGENCE</span></div>
+
     <!-- ===========================
          ANALYSIS PACKAGES SECTION
     ============================ -->
-    <section class="section-container packages">
+    <section class="section-container packages fade-in">
         <h2>Analysis Packages</h2>
         <p class="section-subtitle">Choose Your Level of Development</p>
         <p class="packages-tagline">
@@ -348,10 +363,13 @@
         <a href="assessment.html" class="assessment-btn">Not Sure? Take Our Assessment</a>
     </section>
 
+    <!-- DIVIDER -->
+    <div class="fiqa-divider"><span>FUTBOL IQ INTELLIGENCE</span></div>
+
     <!-- ===========================
          FINAL CTA SECTION
     ============================ -->
-    <section class="final-cta">
+    <section class="final-cta fade-in">
         <h2>Your Next Level Starts With One Upload</h2>
         <p>
             Upload your match footage today. Receive elite-level professional analysis within 24–72 hours.
@@ -414,6 +432,25 @@
 
         </div>
     </footer>
+
+    <!-- ===========================
+         SCROLL ANIMATION SCRIPT
+    ============================ -->
+    <script>
+    document.addEventListener("DOMContentLoaded", () => {
+        const elements = document.querySelectorAll(".fade-in");
+
+        const observer = new IntersectionObserver(entries => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add("visible");
+                }
+            });
+        }, { threshold: 0.2 });
+
+        elements.forEach(el => observer.observe(el));
+    });
+    </script>
 
 </body>
 </html>
