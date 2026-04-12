@@ -227,8 +227,13 @@
     <section class="section-container difference fade-in">
         <h2>The Difference</h2>
         <p class="section-subtitle">Analysis vs. No Analysis</p>
-        <p class="difference-tagline">See how Futbol IQ players outperform across every metric.</p>
 
+        <!-- FIXED SPACING -->
+        <p class="difference-tagline" style="margin-bottom: 40px;">
+            See how Futbol IQ players outperform across every metric.
+        </p>
+
+        <!-- UPDATED BUTTONS -->
         <div class="diff-tabs">
             <button class="active">Overall Development</button>
             <button>Tactical Awareness</button>
@@ -237,50 +242,95 @@
         </div>
 
         <div class="diff-chart">
-            <div class="chart-row">
-                <span>Decision Making Speed</span>
-                <div class="bars">
-                    <div class="bar gray" style="width: 28%"></div>
-                    <div class="bar red" style="width: 87%"></div>
+
+            <!-- OVERALL DEVELOPMENT (WRAPPED) -->
+            <div class="diff-chart-content" id="overall-development">
+                <div class="chart-row">
+                    <span>Decision Making Speed</span>
+                    <div class="bars">
+                        <div class="bar gray" style="width: 28%"></div>
+                        <div class="bar red" style="width: 87%"></div>
+                    </div>
+                </div>
+
+                <div class="chart-row">
+                    <span>Tactical Awareness</span>
+                    <div class="bars">
+                        <div class="bar gray" style="width: 22%"></div>
+                        <div class="bar red" style="width: 91%"></div>
+                    </div>
+                </div>
+
+                <div class="chart-row">
+                    <span>Skill Development Speed</span>
+                    <div class="bars">
+                        <div class="bar gray" style="width: 35%"></div>
+                        <div class="bar red" style="width: 88%"></div>
+                    </div>
+                </div>
+
+                <div class="chart-row">
+                    <span>Training Efficiency</span>
+                    <div class="bars">
+                        <div class="bar gray" style="width: 40%"></div>
+                        <div class="bar red" style="width: 93%"></div>
+                    </div>
+                </div>
+
+                <div class="chart-row">
+                    <span>Confidence Under Pressure</span>
+                    <div class="bars">
+                        <div class="bar gray" style="width: 30%"></div>
+                        <div class="bar red" style="width: 85%"></div>
+                    </div>
                 </div>
             </div>
 
-            <div class="chart-row">
-                <span>Tactical Awareness</span>
-                <div class="bars">
-                    <div class="bar gray" style="width: 22%"></div>
-                    <div class="bar red" style="width: 91%"></div>
+            <!-- TACTICAL AWARENESS (NEW) -->
+            <div class="diff-chart-content" id="tactical-awareness" style="display:none;">
+
+                <div class="chart-row">
+                    <span>Positioning Accuracy</span>
+                    <div class="bars">
+                        <div class="bar gray" style="width: 25%"></div>
+                        <div class="bar red" style="width: 89%"></div>
+                    </div>
                 </div>
+
+                <div class="chart-row">
+                    <span>Space Recognition</span>
+                    <div class="bars">
+                        <div class="bar gray" style="width: 18%"></div>
+                        <div class="bar red" style="width: 86%"></div>
+                    </div>
+                </div>
+
+                <div class="chart-row">
+                    <span>Movement Timing</span>
+                    <div class="bars">
+                        <div class="bar gray" style="width: 32%"></div>
+                        <div class="bar red" style="width: 90%"></div>
+                    </div>
+                </div>
+
+                <div class="chart-row">
+                    <span>Defensive Reading</span>
+                    <div class="bars">
+                        <div class="bar gray" style="width: 28%"></div>
+                        <div class="bar red" style="width: 87%"></div>
+                    </div>
+                </div>
+
+                <div class="chart-row">
+                    <span>Offensive Sequencing</span>
+                    <div class="bars">
+                        <div class="bar gray" style="width: 35%"></div>
+                        <div class="bar red" style="width: 92%"></div>
+                    </div>
+                </div>
+
             </div>
 
-            <div class="chart-row">
-                <span>Skill Development Speed</span>
-                <div class="bars">
-                    <div class="bar gray" style="width: 35%"></div>
-                    <div class="bar red" style="width: 88%"></div>
-                </div>
-            </div>
-
-            <div class="chart-row">
-                <span>Training Efficiency</span>
-                <div class="bars">
-                    <div class="bar gray" style="width: 40%"></div>
-                    <div class="bar red" style="width: 93%"></div>
-                </div>
-            </div>
-
-            <div class="chart-row">
-                <span>Confidence Under Pressure</span>
-                <div class="bars">
-                    <div class="bar gray" style="width: 30%"></div>
-                    <div class="bar red" style="width: 85%"></div>
-                </div>
-            </div>
-
-            <div class="chart-legend">
-                <span><span class="legend-box gray"></span> Without Analysis</span>
-                <span><span class="legend-box red"></span> Futbol IQ Players</span>
-            </div>
         </div>
     </section>
 
@@ -357,7 +407,6 @@
                 All packages include a detailed written report delivered within 24–72 hours of footage submission.
             </p>
 
-            <!-- Updated red assessment button -->
             <a href="assessment.html" class="red-assessment-btn">Not Sure? Take Our Assessment</a>
 
         </div>
@@ -422,33 +471,3 @@
             </div>
 
             <div class="footer-col">
-                <h4>Contact</h4>
-                <p>info@futboliqacademy.com</p>
-                <p>Analysis turnaround: 24–72 hrs</p>
-                <a href="upload.html" class="btn-primary footer-upload">Upload Match Footage</a>
-            </div>
-
-        </div>
-    </footer>
-
-    <!-- ===========================
-         SCROLL ANIMATION SCRIPT
-    ============================ -->
-    <script>
-        document.addEventListener("DOMContentLoaded", () => {
-            const elements = document.querySelectorAll(".fade-in");
-
-            const observer = new IntersectionObserver(entries => {
-                entries.forEach(entry => {
-                    if (entry.isIntersecting) {
-                        entry.target.classList.add("visible");
-                    }
-                });
-            }, { threshold: 0.2 });
-
-            elements.forEach(el => observer.observe(el));
-        });
-    </script>
-
-</body>
-</html>
