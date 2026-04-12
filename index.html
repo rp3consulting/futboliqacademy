@@ -10,7 +10,7 @@
 
     <!-- CSS -->
     <link rel="stylesheet" href="assets/css/nav.css" />
-    <link rel="stylesheet" href="assets/css/home.css" />
+    <link rel="stylesheet" href="assets/css/home-v2.css" />
 </head>
 
 <body>
@@ -288,10 +288,9 @@
     <div class="fiqa-divider"><span>FUTBOL IQ INTELLIGENCE</span></div>
 
     <!-- ===========================
-         PACKAGES MINI HERO (NEW)
+         PACKAGES MINI HERO
     ============================ -->
     <section class="packages-mini-hero fade-in">
-
         <div class="packages-inner">
 
             <h2>Analysis Packages</h2>
@@ -306,7 +305,6 @@
                 <div class="package-card basic">
                     <h3>Basic</h3>
                     <p class="package-type">Full Match Intelligence</p>
-
                     <ul>
                         <li>Full match video analysis</li>
                         <li>Technical skills breakdown</li>
@@ -317,7 +315,6 @@
                         <li>Personalized development plan</li>
                         <li>Key moments report</li>
                     </ul>
-
                     <a href="pricing.html" class="btn-primary package-btn">Get Started</a>
                 </div>
 
@@ -325,7 +322,6 @@
                     <div class="popular-badge">Most Popular</div>
                     <h3>Pro</h3>
                     <p class="package-type">Trainer-Focused Development</p>
-
                     <ul>
                         <li>Everything in Basic</li>
                         <li>Private trainer collaboration report</li>
@@ -336,14 +332,12 @@
                         <li>Trainer-ready PDF summary</li>
                         <li>Priority turnaround time</li>
                     </ul>
-
                     <a href="pricing.html" class="btn-primary package-btn">Get Started</a>
                 </div>
 
                 <div class="package-card elite">
                     <h3>Elite</h3>
                     <p class="package-type">Live Expert Coaching Call</p>
-
                     <ul>
                         <li>Everything in Basic & Pro</li>
                         <li>Live 1-on-1 video call with staff</li>
@@ -354,7 +348,6 @@
                         <li>Recording of the session</li>
                         <li>Ongoing check-in support</li>
                     </ul>
-
                     <a href="pricing.html" class="btn-primary package-btn">Get Started</a>
                 </div>
 
@@ -364,10 +357,10 @@
                 All packages include a detailed written report delivered within 24–72 hours of footage submission.
             </p>
 
-            <a href="assessment.html" class="assessment-btn">Not Sure? Take Our Assessment</a>
+            <!-- Updated red assessment button -->
+            <a href="assessment.html" class="red-assessment-btn">Not Sure? Take Our Assessment</a>
 
         </div>
-
     </section>
 
     <!-- DIVIDER -->
@@ -399,7 +392,6 @@
                 <p>
                     Elite soccer performance analytics. Professional match analysis for players who demand more.
                 </p>
-
                 <div class="footer-socials">
                     <a href="#"><i class="icon yt"></i></a>
                     <a href="#"><i class="icon ig"></i></a>
@@ -433,7 +425,6 @@
                 <h4>Contact</h4>
                 <p>info@futboliqacademy.com</p>
                 <p>Analysis turnaround: 24–72 hrs</p>
-
                 <a href="upload.html" class="btn-primary footer-upload">Upload Match Footage</a>
             </div>
 
@@ -444,19 +435,19 @@
          SCROLL ANIMATION SCRIPT
     ============================ -->
     <script>
-    document.addEventListener("DOMContentLoaded", () => {
-        const elements = document.querySelectorAll(".fade-in");
+        document.addEventListener("DOMContentLoaded", () => {
+            const elements = document.querySelectorAll(".fade-in");
 
-        const observer = new IntersectionObserver(entries => {
-            entries.forEach(entry => {
-                if (entry.isIntersecting) {
-                    entry.target.classList.add("visible");
-                }
-            });
-        }, { threshold: 0.2 });
+            const observer = new IntersectionObserver(entries => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        entry.target.classList.add("visible");
+                    }
+                });
+            }, { threshold: 0.2 });
 
-        elements.forEach(el => observer.observe(el));
-    });
+            elements.forEach(el => observer.observe(el));
+        });
     </script>
 
 </body>
