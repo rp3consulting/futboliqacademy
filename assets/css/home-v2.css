@@ -709,3 +709,8 @@ h1 {
     animation: tacticalMove 18s ease-in-out infinite,
                heroGlow 6s ease-in-out infinite;
 }
+
+.difference-tagline {
+    margin-bottom: 40px; /* add space below the tagline */
+    display: block;
+}
