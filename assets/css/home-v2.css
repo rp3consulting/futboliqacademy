@@ -51,7 +51,7 @@ body {
 }
 
 /* =========================================
-   HERO SECTION (H2 brightness)
+   HERO SECTION (UPDATED FOR NEW DESIGN)
 ========================================= */
 .hero {
     position: relative;
@@ -100,24 +100,77 @@ body {
 .hero-content {
     position: relative;
     z-index: 3;
-    max-width: 850px;
+    max-width: 900px;
     text-align: center;
 }
 
-.hero h1 {
-    font-size: 54px;
-    font-weight: 800;
-    margin-bottom: 20px;
+/* =========================================
+   HERO TITLE — MASSIVE, BOLD, RED ACCENTS
+========================================= */
+.hero-title {
+    font-size: 72px;
+    font-weight: 900;
+    line-height: 1.1;
+    letter-spacing: -0.5px;
+    margin-bottom: 24px;
+    text-transform: none;
 }
 
-.hero p {
-    font-size: 18px;
-    opacity: 0.9;
-    margin-bottom: 32px;
+.hero-title .red-word {
+    color: #ff2d2d;
+}
+
+/* MOB‑A — Keep two-line cinematic layout on ALL devices */
+@media (max-width: 768px) {
+    .hero-title {
+        font-size: 48px;
+        line-height: 1.15;
+    }
 }
 
 /* =========================================
-   WHY FIQA GRID (Manus spacing)
+   HERO PARAGRAPH + BUTTONS + STATS
+========================================= */
+.hero p {
+    font-size: 20px;
+    line-height: 1.55;
+    max-width: 780px;
+    margin: 0 auto 40px;
+    opacity: 0.9;
+}
+
+.hero-buttons a {
+    font-size: 16px;
+    padding: 14px 32px;
+    border-radius: 10px;
+    font-weight: 700;
+    margin: 0 10px;
+}
+
+.hero-stats {
+    margin-top: 40px;
+    display: flex;
+    justify-content: center;
+    gap: 40px;
+}
+
+.hero-stats div {
+    text-align: center;
+}
+
+.hero-stats strong {
+    font-size: 28px;
+    font-weight: 800;
+    display: block;
+}
+
+.hero-stats span {
+    font-size: 14px;
+    opacity: 0.8;
+}
+
+/* =========================================
+   WHY FIQA GRID
 ========================================= */
 .why-grid {
     display: grid;
