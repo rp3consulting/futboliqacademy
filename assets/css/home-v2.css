@@ -95,6 +95,7 @@ body {
     align-items: center;
     justify-content: center;
 
+    /* Tactical background ONLY in hero */
     background-image:
         url("data:image/svg+xml;utf8,\
         <svg xmlns='http://www.w3.org/2000/svg' width='1600' height='900'>\
@@ -155,7 +156,7 @@ body {
 .section-container {
     width: 90%;
     max-width: 1200px;
-    margin: 120px auto;
+    margin: 120px auto; /* T2 spacing */
     padding: 60px;
     border-radius: 16px;
 
