@@ -12,35 +12,33 @@ body {
     color: white;
     overflow-x: hidden;
 
-    /* A1 — Bright Midnight → Teal Gradient (Manus‑FIQA Hybrid) */
     background: linear-gradient(to bottom, #0c2238, #0f2f4d, #134060);
 }
 
 /* =========================================
-   SECTION CONTAINER (C2 width, R3 radius)
+   SECTION CONTAINER
 ========================================= */
 .section-container {
     width: 88%;
-    max-width: 1250px; /* C2 hybrid width */
-    margin: 120px auto; /* T2 spacing */
-    padding: 70px 60px; /* Manus‑style breathing room */
-    border-radius: 12px; /* R3 hybrid radius */
+    max-width: 1250px;
+    margin: 120px auto;
+    padding: 70px 60px;
+    border-radius: 12px;
 
-    /* F1 — Light Frost */
     background: rgba(255,255,255,0.06);
     border: 1px solid rgba(255,255,255,0.10);
     backdrop-filter: blur(12px);
 }
 
 /* =========================================
-   SECTION TITLES (H2‑C hybrid + W2 bold)
+   SECTION TITLES
 ========================================= */
 .section-container h2,
 .final-cta h2,
 .packages-mini-hero h2 {
     font-size: 38px;
-    font-weight: 700; /* W2 */
-    letter-spacing: 0.5px; /* Manus spacing */
+    font-weight: 700;
+    letter-spacing: 0.5px;
     margin-bottom: 18px;
 }
 
@@ -51,7 +49,7 @@ body {
 }
 
 /* =========================================
-   HERO SECTION (UPDATED FOR NEW DESIGN)
+   HERO SECTION
 ========================================= */
 .hero {
     position: relative;
@@ -61,7 +59,6 @@ body {
     align-items: center;
     justify-content: center;
 
-    /* Tactical background ONLY in hero */
     background-image:
         url("data:image/svg+xml;utf8,\
         <svg xmlns='http://www.w3.org/2000/svg' width='1600' height='900'>\
@@ -83,11 +80,7 @@ body {
 .hero-overlay {
     position: absolute;
     inset: 0;
-    background: linear-gradient(
-        to bottom,
-        rgba(0,0,0,0.12),
-        rgba(0,0,0,0.55)
-    );
+    background: linear-gradient(to bottom, rgba(0,0,0,0.12), rgba(0,0,0,0.55));
     z-index: 2;
 }
 
@@ -105,24 +98,21 @@ body {
 }
 
 /* =========================================
-   HERO TITLE — THICK, CINEMATIC, GLOWING
+   HERO TITLE — THICK + GLOW
 ========================================= */
 .hero-title {
     font-size: 78px;
-    font-weight: 900; /* Thickest weight */
+    font-weight: 900;
     line-height: 1.05;
     letter-spacing: -1px;
     margin-bottom: 28px;
     text-transform: none;
-    text-rendering: geometricPrecision;
 
-    /* Cinematic glow behind entire title */
     text-shadow:
         0 0 8px rgba(0, 255, 240, 0.25),
         0 0 16px rgba(0, 200, 255, 0.15);
 }
 
-/* Red glowing words */
 .hero-title .red-word {
     color: #ff2d2d;
     text-shadow:
@@ -131,7 +121,6 @@ body {
         0 0 36px rgba(255, 45, 45, 0.35);
 }
 
-/* MOB‑A — Keep two-line cinematic layout on ALL devices */
 @media (max-width: 768px) {
     .hero-title {
         font-size: 52px;
@@ -166,10 +155,6 @@ body {
     gap: 40px;
 }
 
-.hero-stats div {
-    text-align: center;
-}
-
 .hero-stats strong {
     font-size: 28px;
     font-weight: 800;
@@ -179,6 +164,129 @@ body {
 .hero-stats span {
     font-size: 14px;
     opacity: 0.8;
+}
+
+/* =========================================
+   FIQA DIVIDER — TEXT‑C + RED IQ + GLOW + FLARE + REFLECTION
+========================================= */
+.fiqa-divider {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 120px 0;
+    position: relative;
+}
+
+/* TEXT‑C SPACING */
+.fiqa-divider span {
+    font-size: 32px;
+    font-weight: 800;
+    letter-spacing: 0.35em;
+    color: #ffffff;
+    z-index: 3;
+    padding: 0 22px;
+    position: relative;
+    text-shadow:
+        0 0 10px rgba(255, 45, 45, 0.6),
+        0 0 20px rgba(255, 45, 45, 0.4);
+}
+
+/* RED IQ — larger + bold */
+.fiqa-divider span .iq {
+    color: #ff2d2d;
+    font-weight: 900;
+    font-size: 1.12em;
+    letter-spacing: 0.15em;
+    transition: filter 0.2s ease, text-shadow 0.2s ease;
+
+    text-shadow:
+        0 0 12px rgba(255, 45, 45, 0.9),
+        0 0 24px rgba(255, 45, 45, 0.7),
+        0 0 36px rgba(255, 45, 45, 0.5);
+}
+
+/* GLOWING RED LINES */
+.fiqa-divider::before,
+.fiqa-divider::after {
+    content: "";
+    flex: 1;
+    height: 4px;
+    border-radius: 4px;
+
+    background: linear-gradient(
+        to left,
+        rgba(255, 45, 45, 1),
+        rgba(255, 45, 45, 0.4),
+        rgba(255, 45, 45, 0)
+    );
+
+    box-shadow:
+        0 0 12px rgba(255, 45, 45, 0.7),
+        0 0 24px rgba(255, 45, 45, 0.5);
+
+    position: relative;
+    top: 2px;
+
+    animation: dividerPulse 3s ease-in-out infinite;
+}
+
+/* Right side mirrors gradient */
+.fiqa-divider::after {
+    background: linear-gradient(
+        to right,
+        rgba(255, 45, 45, 1),
+        rgba(255, 45, 45, 0.4),
+        rgba(255, 45, 45, 0)
+    );
+}
+
+/* Glow pulse animation */
+@keyframes dividerPulse {
+    0%, 100% { opacity: 0.85; }
+    50% { opacity: 1; }
+}
+
+/* FLARE SWEEP — IMPACT STYLE (every 8 seconds) */
+.fiqa-divider::before {
+    overflow: hidden;
+}
+
+.fiqa-divider::before::after {
+    content: "";
+    position: absolute;
+    top: -6px;
+    left: -20%;
+    width: 20%;
+    height: 16px;
+
+    background: radial-gradient(
+        circle,
+        rgba(255, 80, 80, 0.9),
+        rgba(255, 80, 80, 0.0)
+    );
+
+    filter: blur(6px);
+    animation: flareSweep 8s ease-in-out infinite;
+}
+
+/* IQ REFLECTION — EXACT SYNC WITH FLARE */
+@keyframes iqFlash {
+    0% { filter: brightness(1); }
+    5% { filter: brightness(2.2); text-shadow: 0 0 22px rgba(255,45,45,1); }
+    12% { filter: brightness(1); }
+}
+
+.fiqa-divider span .iq {
+    animation: iqFlash 8s ease-in-out infinite;
+}
+
+/* Flare movement */
+@keyframes flareSweep {
+    0% { left: -20%; opacity: 0; }
+    10% { opacity: 1; }
+    40% { left: 120%; opacity: 0; }
+    100% { opacity: 0; }
 }
 
 /* =========================================
