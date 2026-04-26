@@ -12,76 +12,42 @@ body {
     color: white;
     overflow-x: hidden;
 
-    /* A1 — Bright Midnight → Teal Gradient */
-    background: linear-gradient(to bottom, #0b1f33, #0e2a47, #12385c);
+    /* A1 — Bright Midnight → Teal Gradient (Manus‑FIQA Hybrid) */
+    background: linear-gradient(to bottom, #0c2238, #0f2f4d, #134060);
 }
 
 /* =========================================
-   NAVIGATION
+   SECTION CONTAINER (C2 width, R3 radius)
 ========================================= */
-.nav-header {
-    width: 100%;
-    padding: 22px 5%;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    position: fixed;
-    top: 0;
-    z-index: 999;
-    background: rgba(0, 0, 0, 0.35);
-    backdrop-filter: blur(10px);
-    border-bottom: 1px solid rgba(255,255,255,0.08);
+.section-container {
+    width: 88%;
+    max-width: 1250px; /* C2 hybrid width */
+    margin: 120px auto; /* T2 spacing */
+    padding: 70px 60px; /* Manus‑style breathing room */
+    border-radius: 12px; /* R3 hybrid radius */
+
+    /* F1 — Light Frost */
+    background: rgba(255,255,255,0.06);
+    border: 1px solid rgba(255,255,255,0.10);
+    backdrop-filter: blur(12px);
 }
 
-.nav-logo {
-    font-size: 26px;
-    font-weight: 800;
-    letter-spacing: 1px;
+/* =========================================
+   SECTION TITLES (H2‑C hybrid + W2 bold)
+========================================= */
+.section-container h2,
+.final-cta h2,
+.packages-mini-hero h2 {
+    font-size: 38px;
+    font-weight: 700; /* W2 */
+    letter-spacing: 0.5px; /* Manus spacing */
+    margin-bottom: 18px;
 }
 
-.nav-links a {
-    margin: 0 18px;
-    color: white;
-    text-decoration: none;
-    font-weight: 500;
-    transition: 0.25s ease;
-}
-
-.nav-links a:hover {
-    color: #4dd2ff;
-}
-
-.nav-actions a {
-    margin-left: 12px;
-}
-
-/* Buttons */
-.btn-primary {
-    padding: 12px 26px;
-    background: #ff2d2d;
-    border-radius: 8px;
-    color: white;
-    text-decoration: none;
-    font-weight: 600;
-    transition: 0.25s ease;
-}
-
-.btn-primary:hover {
-    background: #ff4747;
-}
-
-.btn-outline {
-    padding: 12px 26px;
-    border: 1px solid rgba(255,255,255,0.4);
-    border-radius: 8px;
-    color: white;
-    text-decoration: none;
-    font-weight: 600;
-    transition: 0.25s ease;
-}
-
-.btn-outline:hover {
-    background: rgba(255,255,255,0.15);
+.section-subtitle {
+    font-size: 18px;
+    opacity: 0.85;
+    margin-bottom: 40px;
 }
 
 /* =========================================
@@ -119,7 +85,7 @@ body {
     inset: 0;
     background: linear-gradient(
         to bottom,
-        rgba(0,0,0,0.15),
+        rgba(0,0,0,0.12),
         rgba(0,0,0,0.55)
     );
     z-index: 2;
@@ -139,7 +105,7 @@ body {
 }
 
 .hero h1 {
-    font-size: 52px;
+    font-size: 54px;
     font-weight: 800;
     margin-bottom: 20px;
 }
@@ -151,40 +117,63 @@ body {
 }
 
 /* =========================================
-   F1 — LIGHT FROST PANELS
+   WHY FIQA GRID (Manus spacing)
 ========================================= */
-.section-container {
-    width: 90%;
-    max-width: 1200px;
-    margin: 120px auto; /* T2 spacing */
-    padding: 60px;
-    border-radius: 16px;
+.why-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 32px;
+}
 
+.why-card {
+    padding: 28px;
+    border-radius: 12px;
     background: rgba(255,255,255,0.05);
     border: 1px solid rgba(255,255,255,0.08);
     backdrop-filter: blur(10px);
 }
 
 /* =========================================
-   FIQA DIVIDER
+   PILLARS GRID
 ========================================= */
-.fiqa-divider {
-    width: 100%;
-    text-align: center;
-    margin: 80px 0;
-    font-weight: 700;
-    letter-spacing: 2px;
-    color: rgba(255,255,255,0.6);
+.pillars-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+    gap: 32px;
+}
+
+.pillar-card {
+    padding: 28px;
+    border-radius: 12px;
+    background: rgba(255,255,255,0.05);
+    border: 1px solid rgba(255,255,255,0.08);
 }
 
 /* =========================================
-   DIFFERENCE SECTION (updated)
+   DATA GRID
 ========================================= */
-.difference-tagline {
-    margin-bottom: 40px;
-    display: block;
+.data-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+    gap: 32px;
 }
 
+.data-card {
+    padding: 28px;
+    text-align: center;
+    border-radius: 12px;
+    background: rgba(255,255,255,0.05);
+    border: 1px solid rgba(255,255,255,0.08);
+}
+
+.data-card strong {
+    font-size: 42px;
+    font-weight: 700;
+}
+
+/* =========================================
+   DIFFERENCE SECTION
+========================================= */
 .diff-tabs {
     display: flex;
     gap: 16px;
@@ -195,16 +184,11 @@ body {
     padding: 12px 26px;
     background: rgba(255,255,255,0.05);
     border: 1px solid rgba(255,255,255,0.15);
-    border-radius: 8px;
+    border-radius: 10px;
     color: white;
     font-weight: 600;
     cursor: pointer;
     transition: 0.25s ease;
-}
-
-.diff-tabs button:hover {
-    background: rgba(255,77,77,0.25);
-    border-color: rgba(255,77,77,0.6);
 }
 
 .diff-tabs button.active {
@@ -217,46 +201,30 @@ body {
     margin-bottom: 22px;
 }
 
-.chart-row span {
-    display: block;
-    margin-bottom: 6px;
-    font-weight: 600;
-}
-
 .bars {
     height: 14px;
     width: 100%;
     background: rgba(255,255,255,0.08);
     border-radius: 8px;
-    position: relative;
 }
 
-.bar {
-    height: 100%;
-    border-radius: 8px;
-}
-
-.bar.gray {
-    background: rgba(255,255,255,0.25);
-}
-
-.bar.red {
-    background: #ff2d2d;
-}
+.bar.gray { background: rgba(255,255,255,0.25); }
+.bar.red { background: #ff2d2d; }
 
 /* =========================================
-   PACKAGES MINI HERO
+   PACKAGES SECTION
 ========================================= */
-.packages-mini-hero {
-    margin-top: 80px;
+.packages-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 32px;
 }
 
 .package-card {
+    padding: 40px;
+    border-radius: 12px;
     background: rgba(255,255,255,0.05);
     border: 1px solid rgba(255,255,255,0.08);
-    padding: 40px;
-    border-radius: 16px;
-    backdrop-filter: blur(10px);
 }
 
 /* =========================================
@@ -264,24 +232,22 @@ body {
 ========================================= */
 .final-cta {
     text-align: center;
-    padding: 80px 5%;
+    padding: 100px 5%;
 }
 
 .btn-red {
     background: #ff2d2d;
     padding: 14px 30px;
-    border-radius: 8px;
+    border-radius: 10px;
     color: white;
-    text-decoration: none;
     font-weight: 700;
 }
 
 .btn-dark {
     background: rgba(255,255,255,0.1);
     padding: 14px 30px;
-    border-radius: 8px;
+    border-radius: 10px;
     color: white;
-    text-decoration: none;
     font-weight: 700;
 }
 
