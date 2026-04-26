@@ -105,26 +105,38 @@ body {
 }
 
 /* =========================================
-   HERO TITLE — MASSIVE, BOLD, RED ACCENTS
+   HERO TITLE — THICK, CINEMATIC, GLOWING
 ========================================= */
 .hero-title {
-    font-size: 72px;
-    font-weight: 900;
-    line-height: 1.1;
-    letter-spacing: -0.5px;
-    margin-bottom: 24px;
+    font-size: 78px;
+    font-weight: 900; /* Thickest weight */
+    line-height: 1.05;
+    letter-spacing: -1px;
+    margin-bottom: 28px;
     text-transform: none;
+    text-rendering: geometricPrecision;
+
+    /* Cinematic glow behind entire title */
+    text-shadow:
+        0 0 8px rgba(0, 255, 240, 0.25),
+        0 0 16px rgba(0, 200, 255, 0.15);
 }
 
+/* Red glowing words */
 .hero-title .red-word {
     color: #ff2d2d;
+    text-shadow:
+        0 0 12px rgba(255, 45, 45, 0.75),
+        0 0 24px rgba(255, 45, 45, 0.55),
+        0 0 36px rgba(255, 45, 45, 0.35);
 }
 
 /* MOB‑A — Keep two-line cinematic layout on ALL devices */
 @media (max-width: 768px) {
     .hero-title {
-        font-size: 48px;
-        line-height: 1.15;
+        font-size: 52px;
+        line-height: 1.1;
+        letter-spacing: -0.5px;
     }
 }
 
