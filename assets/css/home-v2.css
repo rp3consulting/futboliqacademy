@@ -11,7 +11,6 @@ body {
     font-family: 'Inter', sans-serif;
     color: white;
     overflow-x: hidden;
-
     background: linear-gradient(to bottom, #0c2238, #0f2f4d, #134060);
 }
 
@@ -24,7 +23,6 @@ body {
     margin: 120px auto;
     padding: 70px 60px;
     border-radius: 12px;
-
     background: rgba(255,255,255,0.06);
     border: 1px solid rgba(255,255,255,0.10);
     backdrop-filter: blur(12px);
@@ -49,7 +47,7 @@ body {
 }
 
 /* =========================================
-   HERO SECTION
+   HERO SECTION — MOB‑A + Tactical Grid
 ========================================= */
 .hero {
     position: relative;
@@ -67,7 +65,6 @@ body {
             <circle cx='800' cy='450' r='110' fill='none' stroke='rgba(0,255,240,0.65)' stroke-width='2'/>\
             <circle cx='800' cy='450' r='12' fill='rgba(0,255,240,0.85)'/>\
         </svg>"),
-
         radial-gradient(circle at 20% 30%, rgba(0,200,255,0.55), transparent 65%),
         radial-gradient(circle at 80% 70%, rgba(0,255,240,0.45), transparent 65%),
         linear-gradient(to bottom right, #041a33, #020b18);
@@ -106,7 +103,6 @@ body {
     line-height: 1.05;
     letter-spacing: -1px;
     margin-bottom: 28px;
-    text-transform: none;
 
     text-shadow:
         0 0 8px rgba(0, 255, 240, 0.25),
@@ -125,7 +121,6 @@ body {
     .hero-title {
         font-size: 52px;
         line-height: 1.1;
-        letter-spacing: -0.5px;
     }
 }
 
@@ -158,7 +153,6 @@ body {
 .hero-stats strong {
     font-size: 28px;
     font-weight: 800;
-    display: block;
 }
 
 .hero-stats span {
@@ -167,7 +161,7 @@ body {
 }
 
 /* =========================================
-   FIQA DIVIDER — TEXT‑C + RED IQ + GLOW + FLARE + REFLECTION
+   FIQA DIVIDER — IQ‑B + TEXT‑C + FLARE‑B
 ========================================= */
 .fiqa-divider {
     width: 100%;
@@ -178,115 +172,48 @@ body {
     position: relative;
 }
 
-/* TEXT‑C SPACING */
 .fiqa-divider span {
     font-size: 32px;
     font-weight: 800;
     letter-spacing: 0.35em;
-    color: #ffffff;
-    z-index: 3;
     padding: 0 22px;
-    position: relative;
     text-shadow:
         0 0 10px rgba(255, 45, 45, 0.6),
         0 0 20px rgba(255, 45, 45, 0.4);
 }
 
-/* RED IQ — larger + bold */
 .fiqa-divider span .iq {
     color: #ff2d2d;
     font-weight: 900;
     font-size: 1.12em;
     letter-spacing: 0.15em;
-    transition: filter 0.2s ease, text-shadow 0.2s ease;
-
-    text-shadow:
-        0 0 12px rgba(255, 45, 45, 0.9),
-        0 0 24px rgba(255, 45, 45, 0.7),
-        0 0 36px rgba(255, 45, 45, 0.5);
+    animation: iqFlash 8s ease-in-out infinite;
 }
 
-/* GLOWING RED LINES */
-.fiqa-divider::before,
-.fiqa-divider::after {
-    content: "";
-    flex: 1;
-    height: 4px;
-    border-radius: 4px;
-
-    background: linear-gradient(
-        to left,
-        rgba(255, 45, 45, 1),
-        rgba(255, 45, 45, 0.4),
-        rgba(255, 45, 45, 0)
-    );
-
-    box-shadow:
-        0 0 12px rgba(255, 45, 45, 0.7),
-        0 0 24px rgba(255, 45, 45, 0.5);
-
-    position: relative;
-    top: 2px;
-
-    animation: dividerPulse 3s ease-in-out infinite;
-}
-
-/* Right side mirrors gradient */
-.fiqa-divider::after {
-    background: linear-gradient(
-        to right,
-        rgba(255, 45, 45, 1),
-        rgba(255, 45, 45, 0.4),
-        rgba(255, 45, 45, 0)
-    );
-}
-
-/* Glow pulse animation */
-@keyframes dividerPulse {
-    0%, 100% { opacity: 0.85; }
-    50% { opacity: 1; }
-}
-
-/* FLARE SWEEP — IMPACT STYLE (every 8 seconds) */
-.fiqa-divider::before {
-    overflow: hidden;
-}
-
-.fiqa-divider::before::after {
-    content: "";
-    position: absolute;
-    top: -6px;
-    left: -20%;
-    width: 20%;
-    height: 16px;
-
-    background: radial-gradient(
-        circle,
-        rgba(255, 80, 80, 0.9),
-        rgba(255, 80, 80, 0.0)
-    );
-
-    filter: blur(6px);
-    animation: flareSweep 8s ease-in-out infinite;
-}
-
-/* IQ REFLECTION — EXACT SYNC WITH FLARE */
 @keyframes iqFlash {
     0% { filter: brightness(1); }
     5% { filter: brightness(2.2); text-shadow: 0 0 22px rgba(255,45,45,1); }
     12% { filter: brightness(1); }
 }
 
-.fiqa-divider span .iq {
-    animation: iqFlash 8s ease-in-out infinite;
+.fiqa-divider::before,
+.fiqa-divider::after {
+    content: "";
+    flex: 1;
+    height: 4px;
+    border-radius: 4px;
+    background: linear-gradient(to left, rgba(255,45,45,1), rgba(255,45,45,0.4), rgba(255,45,45,0));
+    box-shadow: 0 0 12px rgba(255,45,45,0.7);
+    animation: dividerPulse 3s ease-in-out infinite;
 }
 
-/* Flare movement */
-@keyframes flareSweep {
-    0% { left: -20%; opacity: 0; }
-    10% { opacity: 1; }
-    40% { left: 120%; opacity: 0; }
-    100% { opacity: 0; }
+.fiqa-divider::after {
+    background: linear-gradient(to right, rgba(255,45,45,1), rgba(255,45,45,0.4), rgba(255,45,45,0));
+}
+
+@keyframes dividerPulse {
+    0%, 100% { opacity: 0.85; }
+    50% { opacity: 1; }
 }
 
 /* =========================================
@@ -303,7 +230,6 @@ body {
     border-radius: 12px;
     background: rgba(255,255,255,0.05);
     border: 1px solid rgba(255,255,255,0.08);
-    backdrop-filter: blur(10px);
 }
 
 /* =========================================
@@ -401,35 +327,75 @@ body {
 }
 
 /* =========================================
-   FINAL CTA
+   FINAL CTA — Updated Buttons + Glow Rhythm
 ========================================= */
 .final-cta {
     text-align: center;
-    padding: 100px 5%;
+    padding: 120px 5%;
 }
 
-.btn-red {
+.cta-buttons {
+    margin-top: 40px;
+    display: flex;
+    justify-content: center;
+    gap: 24px;
+}
+
+.cta-buttons a {
+    padding: 16px 36px;
+    border-radius: 12px;
+    font-weight: 700;
+    font-size: 18px;
+}
+
+.btn-primary {
     background: #ff2d2d;
-    padding: 14px 30px;
-    border-radius: 10px;
     color: white;
-    font-weight: 700;
+    box-shadow: 0 0 12px rgba(255,45,45,0.6);
 }
 
-.btn-dark {
-    background: rgba(255,255,255,0.1);
-    padding: 14px 30px;
-    border-radius: 10px;
+.btn-outline {
+    border: 2px solid rgba(255,255,255,0.35);
     color: white;
-    font-weight: 700;
+    background: rgba(255,255,255,0.05);
 }
 
 /* =========================================
-   FOOTER
+   FOOTER — Clean + Minimal + Glow
 ========================================= */
 .footer {
     padding: 80px 5%;
     background: rgba(0,0,0,0.35);
     border-top: 1px solid rgba(255,255,255,0.08);
     backdrop-filter: blur(10px);
+    text-align: center;
+}
+
+.footer-logo {
+    width: 120px;
+    opacity: 0.9;
+    margin-bottom: 24px;
+}
+
+.footer-links {
+    display: flex;
+    justify-content: center;
+    gap: 28px;
+    margin-bottom: 28px;
+}
+
+.footer-links a {
+    color: white;
+    opacity: 0.85;
+    font-weight: 500;
+    transition: 0.25s ease;
+}
+
+.footer-links a:hover {
+    opacity: 1;
+}
+
+.footer-copy {
+    opacity: 0.6;
+    font-size: 14px;
 }
